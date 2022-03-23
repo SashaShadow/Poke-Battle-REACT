@@ -1,0 +1,9 @@
+Tienen que estar primero definidos los ataques, la funcion de los mismos y el calculo de daño realizado en base a los stats. A partir de esto ver si es mas prolijo definir los ataques dentro de los pokemon o aparte y realizar algun condicional para que los apliquen. Quizas sea mejor adentro del mismo objeto.
+
+Hay que definir si funciona que se actualice la hp etc directo de player.pokemon
+y rival.pokemon o crear estados aparte para los pokemon. Quizas funcione asi como está. 
+
+Botón FIGHT: cuando la persona elija un ataque deberá restarse primero el total de PP disponibles. Primero debería ejecutarse un typewritter que nombre lo que sucedió y 1 seg o 2 despues verse reflejada la disminución de la hp si asi correspondiese. Quizás para esto puede usarse un useEffect para restar la vida del rival: cuando se actualice cierto estado (por ejemplo, el correspondiente al ataque realizado tras apretar el boton) a su vez actualizar la vida del rival con una promesa y setTimeOut de ciertos segundos para dar efecto en tiempo real. 
+A su vez, luego de todo esto puede ejecutarse tras unos segundos otra promesa que actualice otro estado (el oponente ataca) y a su vez actualice una variable que sea la del texto del typewritter y a su vez unos segundos despues vea reflejada la disminucion de la vida del player. Unos segundos despues, tras una promise, tambien puede setearse nuevamente un estado que devuelva al menu de pelea.
+
+Una vez la hp de alguien queda en 0 terminar la pelea y mostrar algun mensaje sobre el ganador. 

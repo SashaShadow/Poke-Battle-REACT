@@ -1,14 +1,23 @@
 import Home from "./components/Home.js";
-import { PokeContext } from "./pokemock.js";
+import BattleStructure from "./components/BattleStructure.js";
+import { PokeContext } from "./context/PokeContext.js";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+
 
 function App() {
   return (
-    <PokeContext>
-    <div className="App">
-      <Home/>
-    </div>
-    </PokeContext>
+    <BrowserRouter>
+      <PokeContext>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/battle" element={<BattleStructure/>}/>
+          <Route path='*' element={<h1>Not Found</h1>}/>
+        </Routes>
+      </div>
+      </PokeContext>
+    </BrowserRouter>
   );
 }
 

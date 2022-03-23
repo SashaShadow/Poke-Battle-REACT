@@ -1,0 +1,87 @@
+.Battle {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "up" "centere" "down";
+    width: 80vw;
+    height: 100vh;
+    background: white;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-style:ridge;
+}
+
+.Rival {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    grid-area: up;
+}
+
+.Player {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    grid-area: centere;
+    align-items: end;
+}
+
+.RivalPoke {
+    grid-area: right;
+}
+
+.PlayerPoke {
+    grid-area: left;
+}
+
+.RivalPoke img {
+    width: 40%;
+}
+
+.PlayerPoke img {
+    width: 20%;
+}
+
+.PlayerSprite {
+    grid-area: left;
+}
+
+.PlayerSprite img{
+    width: 30%;
+}
+
+.BattleMenu {
+    display: grid;
+    grid-area: down;
+    height: 100%;
+    width: 100%;
+    background: white;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "l f k j s";
+    border-style: groove;
+    box-sizing: border-box;
+}
+
+.BattleText {
+    grid-area: 1 / span 3 ;
+    border-style: groove;
+}
+
+
+.BattleOptions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 4 / span 2;
+    grid-template-areas: "fight pokemon"
+    "item run";
+    align-items: center;
+}
+
+.linkTo {
+    text-decoration: none;
+    color:darkslategray;
+}
+
+.linkTo:hover {
+    color:aqua;
+}
