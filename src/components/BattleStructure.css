@@ -37,8 +37,16 @@
     width: 40%;
 }
 
+.PokeRInfo {
+    justify-content:left;
+}
+
+.PokePInfo {
+    justify-content: end;
+}
+
 .PlayerPoke img {
-    width: 20%;
+    width: 30%;
 }
 
 .PlayerSprite {
@@ -46,7 +54,7 @@
 }
 
 .PlayerSprite img{
-    width: 30%;
+    width: 40%;
 }
 
 .BattleMenu {
@@ -75,6 +83,20 @@
     grid-template-areas: "fight pokemon"
     "item run";
     align-items: center;
+}
+
+.MovesInfo {
+    grid-column: 4 / span 2;
+}
+
+.GoBack {
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+button {
+    border: none;
+    outline: none;
 }
 
 .linkTo {

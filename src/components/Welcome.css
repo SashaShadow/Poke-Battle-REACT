@@ -1,0 +1,25 @@
+.WelcomeContainer {
+    width: 65vw;
+    margin: 0 auto;
+    background-color: bisque;
+    text-align: center;
+}
+
+.Title:hover {
+    color:blueviolet;
+}
+
+.First {
+    max-width: fit-content;
+}
+
+.Y {
+    text-decoration: none;
+    color: rgb(182, 31, 31);
+}   
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+ }

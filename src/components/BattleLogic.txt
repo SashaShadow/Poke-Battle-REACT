@@ -7,3 +7,14 @@ Botón FIGHT: cuando la persona elija un ataque deberá restarse primero el tota
 A su vez, luego de todo esto puede ejecutarse tras unos segundos otra promesa que actualice otro estado (el oponente ataca) y a su vez actualice una variable que sea la del texto del typewritter y a su vez unos segundos despues vea reflejada la disminucion de la vida del player. Unos segundos despues, tras una promise, tambien puede setearse nuevamente un estado que devuelva al menu de pelea.
 
 Una vez la hp de alguien queda en 0 terminar la pelea y mostrar algun mensaje sobre el ganador. 
+
+
+
+const atkPromise = () => {
+                return new Promise(resolve => {
+                setTimeout(() => {
+                    let updRival = rival;
+                    updRival.pokemon.hp -= damage(player.pokemon, rival.pokemon, atk[1])
+                    resolve(updRival);
+                }, 2200)
+            })}

@@ -29,7 +29,7 @@ return (
         }
         
         {loader && player.name === "" && !choose &&
-        <form>
+        <form className="PokeForm">
             <input type="text" onChange={({ target }) => setName(target.value)}/>
             <button type='submit' onClick={handleName}>Confirmar</button>
         </form>

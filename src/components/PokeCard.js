@@ -22,6 +22,7 @@ const setPokeView = () => {
 const pokeChoose = () => {
     setPlayer({...player, pokemon: pokemon[0]});
     setRival({...rival, pokemon: pokemon[1]});
+    setView(false);
 }
 
 return (
